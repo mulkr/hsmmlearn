@@ -6,6 +6,10 @@ models with explicit durations. It is a port of the
 [hsmm package](https://cran.r-project.org/web/packages/hsmm/) for R, and in
 fact wraps the same underlying C++ library.
 
+Since the [original version](https://github.com/jvkersch/hsmmlearn) was abandoned. I decided to pick up the maintenance of the project.
+
+I am not yet too familiar with the underlying C++ code. If you see inaccuracies in any of the algorithms please open an issue/pull request about it and we can figure out a way to correct it.
+
 `hsmmlearn` borrows its name and the design of its api from
 [hmmlearn](http://hmmlearn.readthedocs.org/en/latest/).
 
@@ -17,13 +21,11 @@ repository, you can install the package by running
 ```console
 pip install .
 ```
-Note the dot (`.`) at the end of the command, which is part of the command. You
-will need a C++ compiler to build and install the package.
+(PyPi distribution is planned in the future)
 
-To run the unit tests, do
-```console
-python -m unittest discover -v hsmmlearn
-```
+**IMPORTANT!**
+
+You will need a C++ compiler to build and install the package
 
 Building the documentation
 --------------------------
@@ -41,10 +43,3 @@ Some of the documentation comes as jupyter notebooks, which can be found in the
 `notebooks/` folder. Sphinx ingests these, and produces rst documents out of
 them. If you end up modifying the notebooks, run `make notebooks` in the
 documentation folder and check in the output.
-
-License
--------
-
-hsmmlearn incorporates a significant amount of code from R's hsmm package, and
-is therefore released under the
-[GPL, version 3.0](http://www.gnu.org/licenses/gpl-3.0.en.html).
