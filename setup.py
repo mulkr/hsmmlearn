@@ -34,23 +34,17 @@ CLASSIFIERS = [
     "Topic :: Scientific/Engineering",
     "Programming Language :: Cython",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10"
 ]
 
 REQUIREMENTS = [
-    "cython",
-    "numpy",
-    "scipy",
+    "numpy>=1.25.2",
+    "scipy>=1.9.3"
 ]
-    
 
 DESCRIPTION = __doc__
-MAINTAINER = 'Joris Vankerschaver'
-MAINTAINER_EMAIL = 'Joris.Vankerschaver@gmail.com'
+MAINTAINER = 'Kristóf Müller'
+MAINTAINER_EMAIL = 'muller.kristof@itk.ppke.hu'
 LICENSE = 'GPL v3'
 
 with open('README.md', encoding="utf-8") as handle:
@@ -59,14 +53,15 @@ with open('README.md', encoding="utf-8") as handle:
 setup(
     name='hsmmlearn',
     ext_modules=get_extension_modules(),
-    packages=find_packages(include=["hsmmlearn", "hsmmlearn.*"]),
+    packages=find_packages(include=["hsmmlearn"]),
     include_package_data=True,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
-    version='0.1.0',
+    version='0.1.1',
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     maintainer=MAINTAINER,
     maintainer_email=MAINTAINER_EMAIL,
     license=LICENSE,
+    python_requires=">=3.10"
 )
